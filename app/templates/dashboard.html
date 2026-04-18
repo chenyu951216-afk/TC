@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日前5名</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="/">Dashboard</a>
+      <a href="/ranking">排名</a>
+      <a href="/watchlist">持股追蹤</a>
+      <a href="/alerts">警示</a>
+    </div>
+    <h1>今日前 5 名候選股</h1>
+    <div class="grid">
+      {% for s in stocks %}
+      <div class="card">
+        <div class="stock-id">{{ s.stock_id }}</div>
+        <h2>{{ s.name }}</h2>
+        <p>分數：<strong>{{ s.score }}</strong></p>
+        <p>價格：{{ s.price }}</p>
+        <p>止損：{{ s.stop_loss }}</p>
+        <p>TP1：{{ s.tp1 }}｜TP2：{{ s.tp2 }}｜TP3：{{ s.tp3 }}</p>
+        <p>建議持有：{{ s.holding_days }} 天</p>
+        <button>我已下單</button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

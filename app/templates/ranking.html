@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>排名</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="/">Dashboard</a>
+      <a href="/ranking">排名</a>
+      <a href="/watchlist">持股追蹤</a>
+      <a href="/alerts">警示</a>
+    </div>
+    <h1>每日排名</h1>
+    <table>
+      <tr>
+        <th>股票編號</th>
+        <th>名稱</th>
+        <th>分數</th>
+        <th>價格</th>
+        <th>止損</th>
+        <th>TP1</th>
+      </tr>
+      {% for s in stocks %}
+      <tr>
+        <td>{{ s.stock_id }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.score }}</td>
+        <td>{{ s.price }}</td>
+        <td>{{ s.stop_loss }}</td>
+        <td>{{ s.tp1 }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
