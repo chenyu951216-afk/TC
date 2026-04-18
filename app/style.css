@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1117;
+  color: #f2f4f8;
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.nav {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.nav a {
+  color: #b7c0d8;
+  text-decoration: none;
+  background: #1b2030;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #171c28;
+  border: 1px solid #283248;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+.stock-id {
+  display: inline-block;
+  color: #00d7a7;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgba(0, 215, 167, 0.12);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+h1 {
+  margin-top: 0;
+}
+button {
+  margin-top: 10px;
+  background: #00d7a7;
+  color: #081016;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #171c28;
+  border-radius: 16px;
+  overflow: hidden;
+}
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #283248;
+  text-align: left;
+}
+th {
+  background: #1b2030;
+}
