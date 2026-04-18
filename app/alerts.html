@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>警示</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="/">Dashboard</a>
+      <a href="/ranking">排名</a>
+      <a href="/watchlist">持股追蹤</a>
+      <a href="/alerts">警示</a>
+    </div>
+    <h1>警示中心</h1>
+    <div class="grid">
+      {% for a in alerts %}
+      <div class="card">
+        <div class="stock-id">{{ a.stock }}</div>
+        <h2>{{ a.level }}</h2>
+        <p>{{ a.reason }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>
